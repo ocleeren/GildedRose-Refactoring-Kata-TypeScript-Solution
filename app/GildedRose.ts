@@ -8,9 +8,9 @@ export class GildedRose {
     }
 
     updateQuality() {
-        return this.items.map((item: Item) => {
-            item = item.update();
-            return item;
-        });
+        for (const item of this.items) {
+            item.update();
+        };
+        return this.items;
     }
 }

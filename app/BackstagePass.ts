@@ -1,7 +1,7 @@
 import { Item } from './Item';
 
 export class BackstagePass extends Item {
-    update(): Item {
+    update(): this {
         let modifier = 1;
         if (this.sellIn <= 10) {
             modifier++;

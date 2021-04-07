@@ -7,7 +7,7 @@ export class Legendary extends Item {
         super(name, sellIn, LEGENDARY_QUALITY);
     }
 
-    update(): Item {
+    update(): this {
         return this;
     }
 }

@@ -35,7 +35,7 @@ export class Item {
         this.sellIn--;
     }
     
-    update(): Item {
+    update(): this {
         this.decreaseSellIn();
         let modifier = 1;
         if (this.isExpired()) {
