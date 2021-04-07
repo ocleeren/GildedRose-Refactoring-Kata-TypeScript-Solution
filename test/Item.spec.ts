@@ -36,7 +36,7 @@ describe(`Test - ${ITEM_DEXTERITY_VEST}`, function () {
         item.decreaseQuality();
         expect(item.quality).to.equal(0);
     });
-    it('increaseQuality function should never increase quality by 1', function () {
+    it('increaseQuality function should increase quality by 1', function () {
         const item = ItemFactory(new Item(ITEM_DEXTERITY_VEST, 0, 49));
         item.increaseQuality();
         expect(item.quality).to.equal(50);
