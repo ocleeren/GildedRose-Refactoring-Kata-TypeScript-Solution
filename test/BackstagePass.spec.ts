@@ -10,7 +10,13 @@ describe(`Test - ${ITEM_BACKSTAGE_PASS}`, function () {
         expect(item.sellIn).to.equal(19);
         expect(item.quality).to.equal(26);
     });
-    it('should increase quality by 3 if sellIn value <= 5', function () {
+    it('should increase quality by 2 if sellIn value is less than or equal to 10', function () {
+        const item = ItemFactory(new Item(ITEM_BACKSTAGE_PASS, 10, 10));
+        item.update();
+        expect(item.sellIn).to.equal(9);
+        expect(item.quality).to.equal(12);
+    });
+    it('should increase quality by 3 if sellIn value is less than or equal to 5', function () {
         const item = ItemFactory(new Item(ITEM_BACKSTAGE_PASS, 5, 10));
         item.update();
         expect(item.sellIn).to.equal(4);
